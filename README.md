@@ -3,6 +3,16 @@
 ## What is this?
 This is a Docker image containing `docker-credential-pass` from [docker/docker-credential-helpers/](https://github.com/docker/docker-credential-helpers/).
 
+## Not working
+As of Jan 2021 while this function works if I add the following to `.docker/config.json` and do a `docker login` I get an error:
+```yaml
+{
+  "credsStore": "pass"
+}
+```
+
+This happens even if I make a script called `docker-credential-pass` in my `$PATH` with the contents of the function below. The error I get can be seen in thus [issue](https://github.com/moby/moby/issues/41771) which was fixed recently. I am running the version of Docker container mentioned there but I still get the error. I'll revisit this later. 
+
 ## Bash function example
 ```bash
 function docker-credential-pass { 
