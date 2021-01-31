@@ -1,4 +1,4 @@
 {
-	"imagename": "rakheshster/docker-credential-helper",
+	"imagename": "rakheshster/docker-credential-pass",
 	"version": "0.6.3-1"
 }

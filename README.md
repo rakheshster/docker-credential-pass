@@ -1,7 +1,7 @@
-# docker-sops
+# docker-credential-pass
 ![Build & Push to DockerHub](https://github.com/rakheshster/docker-credential-pass/workflows/Docker%20Build%20&%20Push/badge.svg)
 ## What is this?
-I wanted to try out [SOPS](https://github.com/mozilla/sops) on my Raspberry Pi and there was no ARM version available. Thought I'd Dockerize it. I have a bash function in my `.bash_profile` to then run the container. 
+This is a Docker image containing `docker-credential-pass` from [docker/docker-credential-helpers/](https://github.com/docker/docker-credential-helpers/).
 
 ## Bash function example
 ```bash
@@ -9,7 +9,7 @@ function docker-credential-pass {
         docker run -it --rm \
           --name docker-credential-pass \
           -v $HOME/.password-store:/root/.password-store \
-          rakheshster/docker-credential-helper:latest $@ ;
+          rakheshster/docker-credential-pass:latest $@ ;
 }
 ```
 
